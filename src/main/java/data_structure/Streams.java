@@ -1,7 +1,6 @@
-package datastructure;
+package data_structure;
 
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Streams {

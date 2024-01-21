@@ -1,4 +1,4 @@
-package datastructure;
+package data_structure;
 
 import java.util.StringJoiner;
 import java.util.regex.Matcher;

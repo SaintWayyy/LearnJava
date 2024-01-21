@@ -4,21 +4,21 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
-class MyCallable implements Callable<Integer> {
+class MyCallable implements Callable<String> {
     @Override
-    public Integer call() throws Exception {
-        for (int i = 0; i < 10; i++) {
+    public String call() throws Exception {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Callable" + i);
             Thread.sleep(100);
         }
-        return 1999;
+        return "Callable Done";
     }
 }
 
 class MyRunnable implements Runnable {
     @Override
     public void run() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Runnable" + i);
 
             try {
@@ -33,7 +33,7 @@ class MyRunnable implements Runnable {
 class MyThread extends Thread {
     @Override
     public void run() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Thread" + i);
 
             try {
@@ -49,7 +49,7 @@ public class Main {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         Thread thread = new MyThread();
         Thread runnable = new Thread(new MyRunnable());
-        FutureTask<Integer> futureTask = new FutureTask<>(new MyCallable());
+        FutureTask<String> futureTask = new FutureTask<>(new MyCallable());
         Thread callable = new Thread(futureTask);
 
         thread.start();
@@ -61,7 +61,7 @@ public class Main {
         callable.start();
         callable.join();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Main" + i);
             Thread.sleep(100);
         }
