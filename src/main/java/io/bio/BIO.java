@@ -39,6 +39,7 @@ public class BIO {
         try (clientSocket;
              InputStream inputStream = clientSocket.getInputStream();
              OutputStream outputStream = clientSocket.getOutputStream();
+             // IO 操作是很消耗性能的，缓冲流将数据加载至缓冲区，一次性读取/写入多个字节，从而避免频繁的 IO 操作，提高流的传输效率。
              BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream));
              BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream))) {
 

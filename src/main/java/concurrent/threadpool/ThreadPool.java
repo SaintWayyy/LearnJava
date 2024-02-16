@@ -1,7 +1,5 @@
 package concurrent.threadpool;
 
-import io.netty.util.concurrent.DefaultThreadFactory;
-
 import java.util.concurrent.*;
 
 public class ThreadPool {
@@ -48,6 +46,12 @@ public class ThreadPool {
                 // unit – the time unit for the keepAliveTime argument
                 TimeUnit.SECONDS,
                 arrayBlockingQueue,
+                threadFactory,
+                discardPolicy
+        );
+
+        ScheduledExecutorService scheduledExecutorService = new ScheduledThreadPoolExecutor(
+                corePoolSize,
                 threadFactory,
                 discardPolicy
         );

@@ -1,6 +1,7 @@
 package data_structure;
 
 import java.util.*;
+import java.util.function.BiFunction;
 
 public class Maps {
     public Map<Objects, Objects> hashMap = new HashMap<>();

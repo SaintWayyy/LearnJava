@@ -5,6 +5,7 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class ReadWriteLk {
+
     public static void main(String[] args) {
         ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
         /**
