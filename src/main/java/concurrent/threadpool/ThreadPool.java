@@ -3,13 +3,6 @@ package concurrent.threadpool;
 import java.util.concurrent.*;
 
 public class ThreadPool {
-    ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
-    ExecutorService singleThreadScheduledExecutor = Executors.newSingleThreadScheduledExecutor();
-    ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);
-    ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
-    ExecutorService workStealingPool = Executors.newWorkStealingPool(3);
-    ExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(3);
-
     public static void main(String[] args) {
         // corePoolSize – the number of threads to keep in the pool, even if they are idle,
         // unless allowCoreThreadTimeOut is set
@@ -56,4 +49,11 @@ public class ThreadPool {
                 discardPolicy
         );
     }
+
+    ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
+    ExecutorService singleThreadScheduledExecutor = Executors.newSingleThreadScheduledExecutor();
+    ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);
+    ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
+    ExecutorService workStealingPool = Executors.newWorkStealingPool(3);
+    ExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(3);
 }

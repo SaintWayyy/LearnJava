@@ -2,10 +2,10 @@ package data_structure;
 
 public class DataTypes {
     Boolean aBoolean;
-    Character character;
+    Character aCharacter;
     Byte aByte;
     Short aShort;
-    Integer integer;
+    Integer aInteger;
     Float aFloat;
     Double aDouble;
 }
