@@ -1,4 +1,4 @@
-package design_pattern.creation_patterns.factory_method;
+package design_pattern.factory_method;
 
 /**
  * 抽象产品（Product）： 定义了产品的接口，是工厂方法模式创建的对象的超类型。

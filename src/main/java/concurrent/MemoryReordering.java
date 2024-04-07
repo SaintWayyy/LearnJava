@@ -25,11 +25,11 @@ public class MemoryReordering {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        while (true){
+        while (true) {
             MemoryReordering memoryReordering = new MemoryReordering();
             memoryReordering.run();
 
-            if(memoryReordering.x == 0 && memoryReordering.y == 0)
+            if (memoryReordering.x == 0 && memoryReordering.y == 0)
                 break;
         }
     }

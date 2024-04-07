@@ -1,6 +1,7 @@
 package reflection.dynamic_proxy_cglb;
 
 import net.sf.cglib.proxy.Enhancer;
+import net.sf.cglib.proxy.Proxy;
 
 public class Main {
     public static void main(String[] args) {

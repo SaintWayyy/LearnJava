@@ -9,6 +9,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 public @interface SelfDefinedAnnotation {
     String name() default "default value";
+
     int number() default 10;
 }
 

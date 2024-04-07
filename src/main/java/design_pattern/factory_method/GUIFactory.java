@@ -1,4 +1,4 @@
-package design_pattern.creation_patterns.factory_method;
+package design_pattern.factory_method;
 
 // 抽象工厂 - GUI 工厂接口
 interface GUIFactory {

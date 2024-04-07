@@ -9,12 +9,12 @@ public class Lambda {
         T operate(S a, U b);
     }
 
-    public static <T, S, U> T operate(S a, U b, MathOperation<T, S, U> operation){
+    public static <T, S, U> T operate(S a, U b, MathOperation<T, S, U> operation) {
         return operation.operate(a, b);
     }
 
     public static void main(String[] args) {
         operate(1.0, 2, (o1, o2) -> o1 * o2);
-        operate(1.0,2.0, Math::pow);
+        operate(1.0, 2.0, Math::pow);
     }
 }

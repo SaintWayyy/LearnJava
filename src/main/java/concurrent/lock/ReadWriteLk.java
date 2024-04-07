@@ -13,7 +13,7 @@ public class ReadWriteLk {
          * Shared lock can be placed on objects that do not have an exclusive lock already placed on them.
          * Prevents others from updating the data.
          * */
-        Lock sharedLock= readWriteLock.readLock();
+        Lock sharedLock = readWriteLock.readLock();
         Lock exclusiveLock = readWriteLock.writeLock();
     }
 }

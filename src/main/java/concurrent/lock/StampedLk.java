@@ -5,17 +5,16 @@ import java.util.concurrent.locks.StampedLock;
 public class StampedLk {
     StampedLock stampedLock = new StampedLock();
 
-    void write(String data){
+    void write(String data) {
         long stamp = stampedLock.writeLock();
-        try{
+        try {
             // write data
-        }
-        finally {
+        } finally {
             stampedLock.unlockWrite(stamp);
         }
     }
 
-    void read(){
+    void read() {
         // gain Optimistic Read Lock
         long stamp = stampedLock.tryOptimisticRead();
 

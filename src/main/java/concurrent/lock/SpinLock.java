@@ -15,8 +15,8 @@ public class SpinLock {
 
     AtomicReference<?> atomicReference;
     AtomicReferenceArray<?> atomicReferenceArray;
-    AtomicReferenceFieldUpdater<?,?> atomicReferenceFieldUpdater;
+    AtomicReferenceFieldUpdater<?, ?> atomicReferenceFieldUpdater;
 
     AtomicMarkableReference<?> atomicMarkableReference;
-    AtomicStampedReference<?>atomicStampedReference;
+    AtomicStampedReference<?> atomicStampedReference;
 }

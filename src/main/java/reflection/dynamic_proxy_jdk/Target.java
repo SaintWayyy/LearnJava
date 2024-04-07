@@ -14,6 +14,6 @@ public class Target implements InterfaceA, InterfaceB {
 
     @Override
     public void methodB() {
-        System.out.println(name + "method b");
+        System.out.println(name + " method b");
     }
 }

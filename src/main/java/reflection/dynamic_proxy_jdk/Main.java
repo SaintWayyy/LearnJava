@@ -13,6 +13,7 @@ public class Main {
                 proxy
         );
         a.methodA();
+        System.out.println(a.getClass());
 
         InterfaceB b = (InterfaceB) Proxy.newProxyInstance(
                 target.getClass().getClassLoader(),
@@ -20,5 +21,6 @@ public class Main {
                 proxy
         );
         b.methodB();
+        System.out.println(a.getClass());
     }
 }

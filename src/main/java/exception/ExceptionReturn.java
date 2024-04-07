@@ -1,14 +1,14 @@
 package exception;
 
 public class ExceptionReturn {
-    static int exceptionReturn(){
+    static int exceptionReturn() {
         try {
             throw new RuntimeException();
-        }
-        catch (Exception e){
+        } catch (Exception e) {
+            System.out.println(2);
             return 2;
-        }
-        finally {
+        } finally {
+            System.out.println(3);
             return 3;
         }
     }

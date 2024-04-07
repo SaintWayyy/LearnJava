@@ -16,6 +16,5 @@ public class Streams {
         Stream.generate(Math::random).limit(3).forEach(System.out::println);
 
 
-
     }
 }

@@ -1,5 +1,7 @@
 package data_structure;
 
+import org.junit.jupiter.api.Test;
+
 public class DataTypes {
     Boolean aBoolean;
     Character aCharacter;
@@ -8,4 +10,25 @@ public class DataTypes {
     Integer aInteger;
     Float aFloat;
     Double aDouble;
+
+    @Test
+    void boxing() {
+        Integer integerValue = Integer.valueOf(3);
+        integerValue = 3;
+
+        Integer a = 2000;
+        Integer b = 2000;
+        System.out.println(a == b);
+
+        a = 3;
+        b = 3;
+        System.out.println(a == b);
+    }
+
+    void unboxing() {
+        Integer boxed = 3;
+
+        int unboxed = boxed.intValue();
+        unboxed = boxed;
+    }
 }

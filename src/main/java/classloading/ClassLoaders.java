@@ -18,7 +18,7 @@ public class ClassLoaders {
         // BootstrapClassLoader <-- PlatformClassLoader <-- AppClassLoader
         System.out.println(
                 ClassLoaders.class.getClassLoader() + " " +
-                ClassLoaders.class.getClassLoader().getParent() + " " +
-                ClassLoaders.class.getClassLoader().getParent().getParent());
+                        ClassLoaders.class.getClassLoader().getParent() + " " +
+                        ClassLoaders.class.getClassLoader().getParent().getParent());
     }
 }
