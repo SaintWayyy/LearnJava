@@ -1,6 +1,6 @@
 package reflection.static_proxy;
 
-public class LogProxy implements InterfaceA{
+public class LogProxy implements InterfaceA {
     private InterfaceA target;
 
     public LogProxy(InterfaceA target) {

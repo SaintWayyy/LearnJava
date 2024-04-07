@@ -23,7 +23,7 @@ public class Strings {
     }
 
     @Test
-    public void equals(){
+    public void equals() {
         String b = "test";
         String c = "test";
         String a = new String("test");

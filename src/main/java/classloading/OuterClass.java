@@ -30,7 +30,6 @@ public class OuterClass {
     }
 
 
-
     static class StaticInnerClass {
         static {
             System.out.println("static inner class static initialization block");

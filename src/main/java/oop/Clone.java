@@ -22,7 +22,7 @@ public class Clone {
 
 class MyClass implements Cloneable {
     int num = 1;
-    List<Integer> list = new ArrayList<>(){
+    List<Integer> list = new ArrayList<>() {
         {
             add(1);
         }

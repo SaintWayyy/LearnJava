@@ -9,7 +9,7 @@ import java.util.List;
 public class Generic {
 
     @Test
-    void PECS(){
+    void PECS() {
         // Producer Extends Consumer Super (PECS)
 
         // 使用extends 来创建作为生产者的范型容器, 该容器只能作为生产者, 只能从该容器中读取元素
@@ -27,7 +27,7 @@ public class Generic {
     }
 
     @Test
-    void typeErase(){
+    void typeErase() {
         List<Integer> integerList = new ArrayList<>();
         try {
             Method method = integerList.getClass().getMethod("add", Object.class);

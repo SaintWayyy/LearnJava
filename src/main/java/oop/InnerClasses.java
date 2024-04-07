@@ -3,11 +3,11 @@ package oop;
 import org.junit.jupiter.api.Test;
 
 public class InnerClasses {
-    class InnerClass{
+    class InnerClass {
 
     }
 
-    static class StaticInnerClass{
+    static class StaticInnerClass {
 
     }
 
@@ -29,6 +29,7 @@ public class InnerClasses {
         };
         new Thread(r).start();
 
-        System.out.println(new Object(){}.getClass());
+        System.out.println(new Object() {
+        }.getClass());
     }
 }
