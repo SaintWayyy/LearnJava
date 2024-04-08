@@ -14,7 +14,5 @@ public class Streams {
         Stream.iterate(0, o -> o + 1).limit(3).forEach(System.out::println);
         Stream.iterate(0, o -> o < 3, o -> o + 1).forEach(System.out::println);
         Stream.generate(Math::random).limit(3).forEach(System.out::println);
-
-
     }
 }

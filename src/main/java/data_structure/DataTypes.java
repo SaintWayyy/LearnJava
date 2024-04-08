@@ -13,8 +13,8 @@ public class DataTypes {
 
     @Test
     void boxing() {
-        Integer integerValue = Integer.valueOf(3);
-        integerValue = 3;
+        // Same as: Integer integerValue = Integer.valueOf(3);
+        Integer integerValue = 3;
 
         Integer a = 2000;
         Integer b = 2000;
@@ -28,7 +28,7 @@ public class DataTypes {
     void unboxing() {
         Integer boxed = 3;
 
-        int unboxed = boxed.intValue();
-        unboxed = boxed;
+        // Same as: int unboxed = boxed.intValue();
+        int unboxed = boxed;
     }
 }
