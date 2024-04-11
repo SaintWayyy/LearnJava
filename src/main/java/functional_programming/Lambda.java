@@ -1,7 +1,5 @@
 package functional_programming;
 
-import java.util.function.BiConsumer;
-
 public class Lambda {
     // Same as the interfaces in the package: java.util.function.*
     @FunctionalInterface

@@ -1,8 +1,14 @@
 package classloading;
 
 public class OuterClass {
+    final static int finalStaticField = initFinalStaticField();
     static int staticField = initStaticField();
     int field = initField();
+
+    public static int initFinalStaticField() {
+        System.out.println("init final static field");
+        return 2;
+    }
 
     public static int initStaticField() {
         System.out.println("init static field");

@@ -8,6 +8,7 @@ public class DataTypes {
     Byte aByte;
     Short aShort;
     Integer aInteger;
+    Long aLong;
     Float aFloat;
     Double aDouble;
 
