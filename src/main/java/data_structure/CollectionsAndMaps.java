@@ -16,10 +16,6 @@ public class CollectionsAndMaps {
     public Deque<Object> deque = new ArrayDeque<>();
     public Deque<Object> concurrentLinkedDeque = new ConcurrentLinkedDeque<>();
 
-    public BlockingQueue<Object> arrayBlockingQueue = new ArrayBlockingQueue<>(10);
-    public BlockingQueue<Object> linkedBlockingQueue = new LinkedBlockingQueue<>();
-    public BlockingDeque<Object> linkedBlockingDeque = new LinkedBlockingDeque<>();
-
     public Set<Object> hashSet = new HashSet<>();
     public Set<Object> linkedHashSet = new LinkedHashSet<>();
     public Set<Object> copyOnWriteArraySet = new CopyOnWriteArraySet();

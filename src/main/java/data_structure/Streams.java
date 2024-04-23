@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 public class Streams {
     public static void main(String[] args) {
         Map<Object, Object> map = new HashMap<>();
-        // ways to create a stream
+        // Ways to create a stream
         Stream<Map.Entry<Object, Object>> collectionStream = map.entrySet().stream();
         Stream<Map.Entry<Object, Object>> parallelCollectionStream = map.entrySet().parallelStream();
         Stream<Object> arrayStream = Arrays.stream(new Object[10]);

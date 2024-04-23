@@ -1,4 +1,4 @@
-package design_pattern.singleton;
+package design_pattern.creation_patterns.singleton;
 
 public class DoubleCheckedLockingSingleton {
     private volatile static DoubleCheckedLockingSingleton instance;

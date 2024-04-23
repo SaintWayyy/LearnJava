@@ -2,6 +2,9 @@ package oop;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class InnerClasses {
     class InnerClass {
 
@@ -21,15 +24,12 @@ public class InnerClasses {
 
     @Test
     void anonymousInnerClasses() {
-        Runnable r = new Runnable() {
-            @Override
-            public void run() {
-                System.out.println(this.getClass());
+        List<Integer> arrayList = new ArrayList<>(){
+            {
+                add(1);
             }
         };
-        new Thread(r).start();
 
-        System.out.println(new Object() {
-        }.getClass());
+        System.out.println(arrayList.getClass());
     }
 }

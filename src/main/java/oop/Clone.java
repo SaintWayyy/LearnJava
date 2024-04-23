@@ -3,23 +3,6 @@ package oop;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Clone {
-    public static void main(String[] args) throws CloneNotSupportedException {
-        MyClass origin = new MyClass();
-        MyClass copy = origin.clone();
-
-        System.out.println("Origin: " + origin);
-        System.out.println("Copy: " + copy);
-
-        origin.num = 2;
-        origin.list.add(2);
-
-        System.out.println("Origin: " + origin);
-        System.out.println("Copy: " + copy);
-    }
-}
-
-
 class MyClass implements Cloneable {
     int num = 1;
     List<Integer> list = new ArrayList<>() {
@@ -41,3 +24,22 @@ class MyClass implements Cloneable {
                 '}';
     }
 }
+
+public class Clone {
+    public static void main(String[] args) throws CloneNotSupportedException {
+        MyClass origin = new MyClass();
+        MyClass copy = origin.clone();
+
+        System.out.println("Origin: " + origin);
+        System.out.println("Copy: " + copy);
+
+        origin.num = 2;
+        origin.list.add(2);
+
+        System.out.println("Origin: " + origin);
+        System.out.println("Copy: " + copy);
+    }
+}
+
+
+

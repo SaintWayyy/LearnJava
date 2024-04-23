@@ -1,4 +1,4 @@
-package design_pattern.abstract_factory;
+package design_pattern.creation_patterns.abstract_factory;
 
 interface Button {
     void click();

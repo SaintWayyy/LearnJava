@@ -1,6 +1,7 @@
 package concurrent;
 
 public class MemoryReordering {
+    volatile boolean flag = false;
     int a = 0, b = 0;
     int x = 0, y = 0;
 
@@ -8,11 +9,13 @@ public class MemoryReordering {
         Thread one = new Thread(() -> {
             a = 1;
             x = b;
+            flag = true;
         });
 
         Thread other = new Thread(() -> {
             b = 1;
             y = a;
+            flag = true;
         });
 
         one.start();

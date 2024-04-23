@@ -12,10 +12,10 @@ public class Generic {
     void PECS() {
         // Producer Extends Consumer Super (PECS)
 
-        // 使用extends 来创建作为生产者的范型容器, 该容器只能作为生产者, 只能从该容器中读取元素
+        // 使用 extends 来创建作为生产者的范型容器, 该容器只能作为生产者, 只能从该容器中读取元素
         List<? extends Integer> producer = new ArrayList<>();
 
-        // 使用super 来创建作为消费者的范型容器, 该容器只能作为消费者, 只能向该容器里写入元素
+        // 使用 super 来创建作为消费者的范型容器, 该容器只能作为消费者, 只能向该容器里写入元素
         List<? super Integer> consumer = new ArrayList<>();
 
         Integer a = 1;

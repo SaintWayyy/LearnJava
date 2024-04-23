@@ -1,4 +1,4 @@
-package design_pattern.abstract_factory;
+package design_pattern.creation_patterns.abstract_factory;
 
 // 抽象产品族 - 文本框接口
 interface TextField {

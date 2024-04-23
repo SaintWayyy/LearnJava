@@ -48,7 +48,9 @@ class MyThread extends Thread {
 public class Main {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         Thread thread = new MyThread();
+
         Thread runnable = new Thread(new MyRunnable());
+
         FutureTask<String> futureTask = new FutureTask<>(new MyCallable());
         Thread callable = new Thread(futureTask);
 
@@ -60,11 +62,6 @@ public class Main {
 
         callable.start();
         callable.join();
-
-        for (int i = 0; i < 5; i++) {
-            System.out.println("Main" + i);
-            Thread.sleep(100);
-        }
 
         System.out.println(futureTask.get());
     }

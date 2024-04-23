@@ -1,4 +1,4 @@
-package design_pattern.factory_method;
+package design_pattern.creation_patterns.abstract_factory;
 
 public class Main {
     private static GUIFactory factory;
@@ -12,7 +12,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        configure();
         Button button = factory.createButton();
+        TextField textField = factory.createTextField();
     }
 }

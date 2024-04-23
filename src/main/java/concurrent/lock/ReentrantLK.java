@@ -2,53 +2,53 @@ package concurrent.lock;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.concurrent.locks.*;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
-public class ReadWriteLk<T> {
-    public ReadWriteLock readWriteLock = new ReentrantReadWriteLock(false);
-    public Lock readLock = readWriteLock.readLock();
-    public Lock writeLock = readWriteLock.writeLock();
-    public Condition writeCondition = writeLock.newCondition();
-    public Condition readCondition = readLock.newCondition();
+public class ReentrantLK<T> {
+    // 一个线程在持有锁的情况下，再次获取同一把锁，而不会被阻塞
+    public Lock reentrantLock = new ReentrantLock(false);
+    public Condition condition = reentrantLock.newCondition();
 
     private Queue<T> buffer = new LinkedList<>();
     private int capacity = 5;
 
-    public ReadWriteLk(int capacity){
+    public ReentrantLK(int capacity){
         this.capacity = capacity;
     }
 
     public void produce(T data) throws InterruptedException {
         try {
-            writeLock.lock();
+            reentrantLock.lock();
             while(buffer.size() == capacity){
-                writeCondition.await();
+                condition.await();
             }
             buffer.offer(data);
         }finally {
-            writeLock.unlock();
+            reentrantLock.unlock();
         }
     }
 
     public T consume() throws InterruptedException {
         try {
-            writeLock.lock();
+            reentrantLock.lock();
             while(buffer.isEmpty()){
-                writeCondition.await();
+                condition.await();
             }
 
             return buffer.poll();
         }finally {
-            writeLock.unlock();
+            reentrantLock.unlock();
         }
     }
 
     public T peek(){
         try {
-            readLock.lock();
+            reentrantLock.lock();
             return buffer.peek();
         }finally {
-            readLock.unlock();
+            reentrantLock.unlock();
         }
     }
 }
