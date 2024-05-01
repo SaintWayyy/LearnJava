@@ -1,5 +1,7 @@
 package concurrent.threadpool;
 
+import io.netty.util.concurrent.DefaultThreadFactory;
+
 import java.util.concurrent.*;
 
 public class ThreadPool {
@@ -32,7 +34,7 @@ public class ThreadPool {
         BlockingQueue<Runnable> synchronousQueue = new SynchronousQueue<>();
 
         // threadFactory – the factory to use when the executor creates a new thread.
-        ThreadFactory threadFactory = Thread::new;
+        ThreadFactory threadFactory = new DefaultThreadFactory("My Thread Pool");
 
         // handler – the handler to use when execution is blocked because the thread bounds and queue capacities are reached.
         RejectedExecutionHandler abortPolicy = new ThreadPoolExecutor.AbortPolicy();
@@ -52,6 +54,7 @@ public class ThreadPool {
         );
 
         System.out.println(threadPool.getPoolSize());
+
         ScheduledExecutorService scheduledExecutorService = new ScheduledThreadPoolExecutor(
                 corePoolSize,
                 threadFactory,

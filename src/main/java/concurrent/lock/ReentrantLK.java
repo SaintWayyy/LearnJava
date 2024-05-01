@@ -24,8 +24,10 @@ public class ReentrantLK<T> {
             while(buffer.size() == capacity){
                 condition.await();
             }
+
             buffer.offer(data);
         }finally {
+            condition.signalAll();
             reentrantLock.unlock();
         }
     }
@@ -39,6 +41,7 @@ public class ReentrantLK<T> {
 
             return buffer.poll();
         }finally {
+            condition.signalAll();
             reentrantLock.unlock();
         }
     }
