@@ -12,7 +12,7 @@ public class References {
     public ReferenceQueue<Object> refQue = new ReferenceQueue<>();
 
     /**
-     * Objects reachable only by soft reference
+     * Objects referenced only by soft reference
      * should be cleared before the OutOfMemoryError exception is thrown
      */
     public SoftReference<Object> softRef = new SoftReference<>(new Object(), refQue);
